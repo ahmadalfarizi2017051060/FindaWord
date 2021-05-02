@@ -32,7 +32,7 @@ int main()
     for (int i=0;i<n;i++){
         cin.ignore();
         cin.getline(word,16,'\n');
-        if (searchVertical(word) || searchHorizontal(word)){
+        if (searchVertical(word) || searchHorizontal(word) || searchDiagonal(word)){
             cout << "Ada\n";
         }
         else{
@@ -51,7 +51,6 @@ bool searchVertical(char *wordy){
 		if (strstr(word, wordy) != NULL){ 
 			return true; 
 		}
-		//reverse vertical
 		else{
 			reverse(word, word + strlen(word));
 			if(strstr(word, wordy) != NULL){
@@ -64,14 +63,10 @@ bool searchVertical(char *wordy){
 
 bool searchHorizontal(char *wordy){
 	char word[15]; 
-	//^^Variabel untuk menyimpan data sementara yang di reverse
-	for (int i=0; i<15; i++){
-		if (strstr(words[i], wordy) != NULL){ 
+	for (int i = 0; i < 15; i++){
+		if (strstr(words[i], wordy) != NULL){
 			return true;
 		}
-	}
-	//Reverse Horizontal
-	for (int i = 0; i < 15; i++){
     	for(int j = 0; j < 15; j++){
 	    	word[j] = words[i][j];
 		}
