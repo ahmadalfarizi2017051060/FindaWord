@@ -29,10 +29,10 @@ int main()
     char word[16];
     int n;
     cin>>n;
+    cin.ignore();
     for (int i=0;i<n;i++){
-        cin.ignore();
         cin.getline(word,16,'\n');
-        if (searchVertical(word) || searchHorizontal(word) || searchDiagonal(word)){
+        if (searchVertical(word) || searchHorizontal(word)){
             cout << "Ada\n";
         }
         else{
