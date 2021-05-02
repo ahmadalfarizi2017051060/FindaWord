@@ -28,7 +28,6 @@ int main()
 {
     char word[16];
     int n;
-    cout << "Masukkan Banyak kata yang ingin dicari : ";
     cin>>n;
     for (int i=0;i<n;i++){
         cin.ignore();
