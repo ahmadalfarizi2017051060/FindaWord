@@ -64,8 +64,7 @@ bool searchVertical(char *wordy){
 }
 
 bool searchHorizontal(char *wordy){
-	char *inspect;
-	char worded[15]; 
+	char word[15]; 
 	//^^Variabel untuk menyimpan data sementara yang di reverse
 	for (int i=0; i<15; i++){
 		if (strstr(words[i], wordy) != NULL){ 
@@ -75,13 +74,13 @@ bool searchHorizontal(char *wordy){
 	//Reverse Horizontal
 	for (int i = 0; i < 15; i++){
     	for(int j = 0; j < 15; j++){
-	    	worded[j] = words[i][j];
+	    	word[j] = words[i][j];
 		}
-	    reverse(worded, worded + strlen(worded));
-	    inspect = strstr(worded, wordy);
-	    if(inspect != NULL){
+	    reverse(word, word + strlen(word));
+	    if(strstr(word, wordy) != NULL){
 	        return true;
 	    }
     }	
 	return false;
+}
 }
