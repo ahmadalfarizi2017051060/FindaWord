@@ -83,4 +83,3 @@ bool searchHorizontal(char *wordy){
     }	
 	return false;
 }
-}
