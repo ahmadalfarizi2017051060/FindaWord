@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <algorithm>
-//mencari_kata
+
 using namespace std;
 const int cols = 16, rows = 15;
 
@@ -21,7 +21,6 @@ const int cols = 16, rows = 15;
                             "pdcrzmsngrdnrpz",
                             "ohnkzwaterjgtra"};
 
-char *reverse(char *);
 bool searchVertical(char *);
 bool searchHorizontal(char *);
 
@@ -32,8 +31,9 @@ int main()
     cout << "Masukkan Banyak kata yang ingin dicari : ";
     cin>>n;
     for (int i=0;i<n;i++){
+        cin.ignore();
         cin.getline(word,16,'\n');
-        if (searchVertical(word)){
+        if (searchVertical(word) || searchHorizontal(word)){
             cout << "Ada\n";
         }
         else{
