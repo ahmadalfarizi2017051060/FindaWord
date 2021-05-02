@@ -42,3 +42,22 @@ int main()
     }
     return 0;
 }
+bool searchVertical(char *wordy){
+	char word[16]; 
+	for (int i=0; i<15; i++){
+		for (int j=0; j<15; j++){
+			word[j] = words[j][i];
+		}
+		if (strstr(word, wordy) != NULL){ 
+			return true; 
+		}
+		//reverse vertical
+		else{
+			reverse(word, word + strlen(word));
+			if(strstr(word, wordy) != NULL){
+				return true;
+			}
+		}
+	}
+	return false;
+}
