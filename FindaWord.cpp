@@ -1,3 +1,9 @@
+/*
+Nama Anggota:
+1. Ahmad Al Farizi	2017051060
+2. M Sultan Raisyah	2057051019
+*/
+
 #include <iostream>
 #include <cstring>
 #include <algorithm>
