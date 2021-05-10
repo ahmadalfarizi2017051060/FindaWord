@@ -6,7 +6,7 @@ using namespace std;
 const int cols = 16, rows = 15;
 
  char words[rows][cols] = {"tgbwwinterwsesn",
-                        	"aaunttmmhfoodnb",
+                            "aaunttmmhfoodnb",
                             "jlwcqldzmpmvdmr",
                             "asagmquwvvbsohi",
                             "bwplotanadtpgnc",
